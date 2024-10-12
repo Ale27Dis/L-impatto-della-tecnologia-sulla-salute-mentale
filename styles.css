@@ -1,0 +1,153 @@
+body {
+    background-color: #003249;
+    color: #CCDBDC;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #034d6f; /* Colore di sfondo bianco */
+    padding: 0.1rem 0.3rem; /* Riduce l'altezza della nav */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #003249; /* Aggiunge un'ombra leggera */
+}
+
+nav ul {
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    font-family: 'Roboto', sans-serif;
+    margin: 0.3rem; /* Riduce il margine per adattarsi meglio agli schermi piccoli */
+}
+
+nav ul li button {
+    font-family: 'Roboto', sans-serif;
+    background: #003249; /* Colore di sfondo blu */
+    border: none;
+    color: #e5e8ea;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.4rem; /* Riduce l'altezza dei pulsanti */
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s, transform 0.3s; /* Transizione per colore e trasformazione */
+}
+
+nav ul li button:hover {
+    background-color: #57989f; /* Colore di sfondo blu scuro al passaggio del mouse */
+    transform: scale(1.05); /* Leggera ingrandimento al passaggio del mouse */
+}
+
+h1 {
+    margin-top: 60px;
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Colore del testo scuro */
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.title-modern {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #8ea3bb; /* Colore blu */
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+}
+
+
+
+main {
+    padding: 2rem;
+}
+
+img {
+    margin-left: 25px;
+}
+
+.highlight {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    margin: 2rem 0;
+    width: calc(100% + 4rem); /* Aumenta la larghezza per coprire i margini */
+    margin-left: -2rem; /* Sposta il div a sinistra per coprire il margine */
+    margin-right: -2rem; /* Sposta il div a destra per coprire il margine */
+    box-sizing: border-box; /* Includere il padding nella larghezza totale */
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    margin-bottom: 100px;
+}
+
+.gallery-left,
+.gallery-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-left img,
+.gallery-right img {
+    width: 100%;
+    max-width: 300px;
+
+    width: 250px; /* Imposta la larghezza desiderata */
+    height: 250px; /* Imposta l'altezza desiderata */
+    object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
+
+    margin: 1rem 0;
+}
+
+.uniform-size {
+    width: 400px; /* Imposta la larghezza desiderata */
+    height: 400px; /* Imposta l'altezza desiderata */
+    object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
+}
+
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries per schermi medi */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex: 1 1 25%; /* Tre colonne da due pulsanti ciascuna */
+    }
+}
+
+
+/* Media Queries per schermi molto piccoli */
+@media (max-width: 400px) {
+    nav {
+        display: none; /* Nasconde la barra di navigazione su schermi molto piccoli */
+    }
+}
